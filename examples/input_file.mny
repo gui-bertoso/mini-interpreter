@@ -1,0 +1,8 @@
+Variable A -> Integer = 9
+Variable B -> Integer = 2
+
+WriteText(HelloWorld);
+Cdt A >> B {
+    WriteText(The Variable A:<[A]> is more big)} Ccdt {WriteText(The Variable B:<[B]> is more big)}
+Cdt A == 9 {
+    WriteText(A is equal 9)} Ccdt {WriteText(A is not equal 9)}

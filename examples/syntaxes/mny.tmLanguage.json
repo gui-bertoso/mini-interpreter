@@ -1,0 +1,53 @@
+{
+    "scopeName": "source.mny",
+    "name": "Mny",
+    "patterns": [
+        {"include": "#comments"},
+        {"include": "#strings"},
+        {"include": "#keywords"},
+        {"include": "#types"},
+        {"include": "#numbers"},
+        {"include": "#functions"},
+        {"include": "#operators"}
+    ],
+    "repository": {
+        "comments":{
+            "patterns":[
+                {"name":"comment.line.double-slash.mny", "match":"//.*$"},
+                {"name":"comment.block.mny", "begin":"/\\*", "end":"\\*/"}
+            ]
+        },
+        "strings":{
+            "patterns":[
+                {"name":"string.quoted.double.mny", "match":"\"(?:\\\\.|[^\"])*\""},
+                {"name":"string.quoted.single.mny", "match":"'(?\\\\.|[^'])*'"}
+            ]
+        },
+        "keywords":{
+            "patterns":[
+                {"name":"keyword.control.mny", "match":"\\b(if|else|while|for|return|import|from|func|var|const)\\b"}
+            ]
+        },
+        "types":{
+            "patterns":[
+                {"name":"storage.type.mny", "match":"\\b(int|float|string|bool|void)\\b"}
+            ]
+        },
+        "numbers":{
+            "patterns":[
+                {"name":"constant.numeric.mny", "match":"\\b\\d+(?:\\.||d+)?\\b"}
+            ]
+        },
+        "functions":{
+            "patterns":[
+                {"name":"entity.name.function.mny", "match":"\\b([A-Za-z_][A-Za-z0-9_]*)\\s*(?=\\()"}
+            ]
+        },
+        "operators":{
+            "patterns":[
+                {"name":"keyword.operator.mny", "match":"[+\\-*/=<>!%]+"},
+                {"name":"punctuation.separator.mny", "match":"[:;.,()\\[\\]{}]"}
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "mny-language",
+    "displayName": "Mny Language",
+    "publisher": "gui.bertoso",
+    "engines": { "vscode": "^1.50.0"},
+    "contributes": {
+        "languages": [{
+            "id": "mny",
+            "aliases": ["Mny", "mny"],
+            "extensions": [".mny"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [
+            {
+                "language": "mny",
+                "scopeName": "source.mny",
+                "path": "./syntaxes/mny.tmLanguage.json"
+            }
+        ]
+    }
+}
