@@ -17,3 +17,7 @@ A small experimental programming language created by **Guilherme Bertoso**, desi
 
 ## How to run
 The compiled Python code will appear in 'examples/output.py'
+
+## License
+
+The author's code uses the [MIT License](LICENSE). Third-party materials retain their original licenses.
